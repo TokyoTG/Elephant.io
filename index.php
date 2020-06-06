@@ -5,7 +5,7 @@ require("vendor/autoload.php");
 use ElephantIO\Client;
 use ElephantIO\Engine\SocketIO\Version2X;
 
-// $version = new Version2X('http://localhost:8000');
+// $version = new Version2X('http://localhost:800');
 // $client = new Client($version);
 
 // $client->initialize();
