@@ -5,6 +5,8 @@ require("vendor/autoload.php");
 use ElephantIO\Client;
 use ElephantIO\Engine\SocketIO\Version2X;
 
+
+exec("node server.js")
 // $version = new Version2X('http://localhost:8000');
 // $client = new Client($version);
 
@@ -28,7 +30,7 @@ use ElephantIO\Engine\SocketIO\Version2X;
     <!-- <script src="."></script> -->
     <script>
         let btn = document.getElementById('alert');
-        var socket = io();
+        var socket = io('https://elephant-io.herokuapp.com:8000');
         btn.addEventListener('click', () => {
             socket.emit("alert", "someone clicked alert");
         })
