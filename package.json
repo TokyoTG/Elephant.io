@@ -1,0 +1,24 @@
+{
+  "name": "elephant.io",
+  "version": "1.0.0",
+  "description": "PHP and Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TokyoTG/Elephant.io.git"
+  },
+  "author": "Tokyo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TokyoTG/Elephant.io/issues"
+  },
+  "homepage": "https://github.com/TokyoTG/Elephant.io#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "winston": "^3.2.1"
+  }
+}

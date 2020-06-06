@@ -1,0 +1,12 @@
+{
+    "name": "owner/elephant.io",
+    "authors": [
+        {
+            "name": "Toyeeb Ganiu",
+            "email": "tboynonilekan@gmail.com"
+        }
+    ],
+    "require": {
+        "wisembly/elephant.io": "^3.3"
+    }
+}
