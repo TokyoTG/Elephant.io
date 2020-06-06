@@ -28,7 +28,7 @@ use ElephantIO\Engine\SocketIO\Version2X;
     <!-- <script src="."></script> -->
     <script>
         let btn = document.getElementById('alert');
-        var socket = io('https://elephant-io.herokuapp.com/);
+        var socket = io('https://elephant-io.herokuapp.com/');
         btn.addEventListener('click', () => {
             socket.emit("alert", "someone clicked alert");
         })
