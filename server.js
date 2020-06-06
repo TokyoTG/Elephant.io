@@ -3,7 +3,9 @@ const http = require("http");
 const logger = require("winston");
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+//const PORT = process.env.PORT || 8000;
+
+const PORT = 8000;
 const http_server = http.createServer(app);
 const io = require("socket.io")(http_server);
 
