@@ -4,7 +4,8 @@ const logger = require("winston");
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-
+let clientPath = __dirname + `/`;
+app.use(express.static(clientPath));
 //const PORT = 8000;
 const http_server = http.createServer(app);
 const io = require("socket.io")(http_server);
