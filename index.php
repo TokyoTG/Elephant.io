@@ -7,7 +7,7 @@ use ElephantIO\Engine\SocketIO\Version2X;
 
 // $version = new Version2X('http://localhost:800');
 // $client = new Client($version);
-
+exec("node server.js");
 // $client->initialize();
 // $client->emit('hello', ['foo' => 'bar']);
 // $client->close();
