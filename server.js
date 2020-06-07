@@ -1,21 +1,21 @@
-const express = require("express");
-const http = require("http");
-const logger = require("winston");
+//const express = require("express");
+//const http = require("http");
+//const logger = require("winston");
 
-const app = express();
+//const app = express();
 const PORT = process.env.PORT || 8000;
-let clientPath = __dirname + `/`;
+//let clientPath = __dirname + `/`;
 //app.use(express.static(clientPath));
 //const PORT = 8000;
 //const http_server = http.createServer(app);
 const io = require("socket.io").listen(PORT);
 
-logger.remove(logger.transports.Console);
+//logger.remove(logger.transports.Console);
 // logger.add(logger.transports.Console, { colorize: true, timestamp: true });
-logger.info("SocketIO > listening on port " + PORT);
+//logger.info("SocketIO > listening on port " + PORT);
 
 io.on("connection", (socket) => {
-  logger.info("Socket IO");
+  //logger.info("Socket IO");
   socket.on("hello", () => {
     console.log("sockect connected");
   });
