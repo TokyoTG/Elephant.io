@@ -24,8 +24,6 @@ use ElephantIO\Engine\SocketIO\Version2X;
 <body>
     <h1>Welcome</h1>
     <button id="alert">Alert Everyone</button>
-<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
-    <!-- <script src="."></script> -->
     <script src="/socket.io/socket.io.js"></script>
     <script>
         let btn = document.getElementById('alert');
