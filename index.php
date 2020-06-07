@@ -27,7 +27,7 @@ exec("node server.js");
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script>
         let btn = document.getElementById('alert');
-        var socket = io();
+        var socket = io('https://elephant-io.herokuapp.com:39377');
         btn.addEventListener('click', () => {
             socket.emit("alert", "someone clicked alert");
         })
