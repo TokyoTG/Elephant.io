@@ -5,10 +5,10 @@ const logger = require("winston");
 const app = express();
 const PORT = process.env.PORT || 8000;
 let clientPath = __dirname + `/`;
-app.use(express.static(clientPath));
+//app.use(express.static(clientPath));
 //const PORT = 8000;
-const http_server = http.createServer(app);
-const io = require("socket.io")(http_server);
+//const http_server = http.createServer(app);
+const io = require("socket.io").listen(PORT);
 
 logger.remove(logger.transports.Console);
 // logger.add(logger.transports.Console, { colorize: true, timestamp: true });
@@ -29,6 +29,6 @@ io.on("connection", (socket) => {
   });
 });
 
-http_server.listen(PORT, () => {
-  console.log(PORT);
-});
+//http_server.listen(PORT, () => {
+  //console.log(PORT);
+//});
