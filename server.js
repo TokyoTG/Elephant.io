@@ -1,16 +1,11 @@
 // const express = require("express");
 // const http = require("http");
 const logger = require("winston");
-
-// const app = express();
-
-// const http_server = http.createServer(app);
-// const io = require("socket.io")(http_server);
 const app = require("express")();
-const express = require("express");
 const http = require("http").createServer(app);
+
+const PORT = process.env.PORT || 1100;
 const io = require("socket.io")(http);
-const PORT = process.env.PORT || 8000;
 logger.remove(logger.transports.Console);
 // logger.add(logger.transports.Console, { colorize: true, timestamp: true });
 logger.info("SocketIO > listening on port " + PORT);

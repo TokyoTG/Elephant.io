@@ -6,7 +6,7 @@ use ElephantIO\Client;
 use ElephantIO\Engine\SocketIO\Version2X;
 
 
-exec("node server.js")
+// exec("node server.js");
 // $version = new Version2X('http://localhost:8000');
 // $client = new Client($version);
 
@@ -30,7 +30,8 @@ exec("node server.js")
     <!-- <script src="."></script> -->
     <script>
         let btn = document.getElementById('alert');
-        var socket = io('https://elephant-io.herokuapp.com:8000');
+        console.log(location.port);
+        var socket = io('https://elephant-io.herokuapp.com:' + location.port);
         btn.addEventListener('click', () => {
             socket.emit("alert", "someone clicked alert");
         })
