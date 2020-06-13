@@ -31,7 +31,7 @@ exec("node server.js");
     <script>
         let btn = document.getElementById('alert');
         console.log(location.port);
-        var socket = io('https://elephant-io.herokuapp.com:' + location.port);
+        var socket = io();
         btn.addEventListener('click', () => {
             socket.emit("alert", "someone clicked alert");
         })
