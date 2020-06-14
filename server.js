@@ -4,7 +4,7 @@ const logger = require("winston");
 const app = require("express")();
 const http = require("http").createServer(app);
 
-const PORT = process.env.PORT || 1100;
+const PORT = process.env.PORT || 9090;
 const io = require("socket.io")(http);
 logger.remove(logger.transports.Console);
 // logger.add(logger.transports.Console, { colorize: true, timestamp: true });
@@ -15,7 +15,6 @@ io.on("connection", (socket) => {
   socket.on("hello", () => {
     console.log("sockect connected");
   });
-
   socket.on("alert", (data) => {
     io.emit("alert_all", data);
   });
@@ -27,4 +26,5 @@ io.on("connection", (socket) => {
 
 http.listen(PORT, () => {
   console.log("listening on *:8000");
+  console.log("server started");
 });
