@@ -1,6 +1,6 @@
 <?php
 
-exec("node server.js");
+// exec("node server.js");
 require("vendor/autoload.php");
 
 use ElephantIO\Client;
@@ -31,7 +31,7 @@ echo $_SERVER['SERVER_PORT'];
     <!-- <script src="."></script> -->
     <script>
         let btn = document.getElementById('alert');
-        var socket = io('http://localhost:9090');
+        var socket = io('https://elephant-io.herokuapp.com:2826');
 
         console.log(location.port);
         btn.addEventListener('click', () => {
