@@ -1,6 +1,6 @@
 <?php
 
-// exec("node server.js");
+exec("node server.js");
 require("vendor/autoload.php");
 
 use ElephantIO\Client;
