@@ -38,6 +38,9 @@ echo $_SERVER['SERVER_PORT'];
             socket.emit("alert", "someone clicked alert");
         })
         socket.emit("hi", "I just got here")
+        socket.on('connect', () => {
+            console.log('socket connected');
+        })
         socket.on('alert_all', data => {
             alert(data);
         })
